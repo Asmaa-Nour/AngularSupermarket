@@ -1,0 +1,37 @@
+    
+    <div class="item-card" >
+        <mat-card >
+            <mat-card-title style="height: 40px;"><a style="font-size: 22px;" routerLink='/'>{{product.smallTitle}} ...</a>  </mat-card-title>
+            <mat-card-subtitle> {{product.category}} </mat-card-subtitle>
+            <mat-card-content> 
+                <p class="desc">
+                {{product.smallDescription}}
+               </p> 
+        </mat-card-content>
+            <mat-card-footer> {{product.price}} $</mat-card-footer>
+                <img src={{product.image}} mat-card-image>
+
+                <mat-card-subtitle>
+                    <!-- <button class="btn-success" (click)="openModal('custom-modal-1')">ADD TO CART</button> -->
+                    <button class=" btn-success btn-sm" (click)="addToCartClicked(product.id)">ADD TO CART</button>
+                    <button class="btns btn-danger btn-sm" (click)="removeFromCart(product.id)">Remove</button>
+                    <!-- <button class="btn-success" (click)="popup=true">ADD TO CART</button> -->
+                </mat-card-subtitle> 
+        </mat-card>
+    
+    </div>
+
+
+    <div class="overlay" *ngIf="popup">
+        <div class="popup">
+            <a class="close" (click)="popup = false">&times;</a>
+            <div class="content">
+                Product is Added successfully
+            </div>
+        </div>
+    </div>
+<!-- 
+    <jw-modal id="custom-modal-1">
+        <h1 style="height:1000px">A Tall Custom Modal!</h1>
+        <button (click)="closeModal('custom-modal-2');">Close</button>
+    </jw-modal> -->

@@ -1,0 +1,18 @@
+<!-- 
+  <app-menu></app-menu>
+  
+  <button style="float:right; margin-top: 27px;margin-right: 15px;;" class="btn-success btn-sm " (click)="checkoutClicked()">PROCEED TO CHECKOUT</button> -->
+
+<div style="background-color: lightgray; height: 50px;;">
+    <h1>All Categories</h1>
+</div>
+<div class="row col-md-10 offset-md-1">
+
+    <!-- class="col-md-3" -->
+    <div class="col-md-3" *ngFor="let p of products">
+        <app-product-one-item  [product]=p ></app-product-one-item>
+        <!-- <app-product-one-item  [product]=p *ngFor="let p of products" ></app-product-one-item> -->
+    </div>
+    
+</div>
+

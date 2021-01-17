@@ -1,0 +1,21 @@
+
+<mat-toolbar style="width: 100%;" color="primary" class="app-header">
+    <span class="nav-tool-items">
+      <a mat-button   routerLink="authentication/signin" routerLinkActive="active">Sign in</a>
+      <!-- <Link to="/signin" />Login</Link> -->
+
+      <a mat-button  routerLink="authentication/register" routerLinkActive="active">Register</a>
+    </span>
+  </mat-toolbar>
+  <div class="displayedForm">
+      <router-outlet></router-outlet>
+
+  </div>
+<!-- <app-home></app-home> -->
+<!-- j
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav> -->
